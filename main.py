@@ -14,7 +14,8 @@ import signal
 
 # path = "/home/flo/PycharmProjects/Privat/"
 #path = "/home/pi/"
-path = "/app/files/"
+#path = "/app/files/"
+path = "files/"
 
 
 def pc_started():
@@ -43,6 +44,7 @@ def log(message):
     f = open(log_path, "a")
     f.write(str(ctime()) + f" {message}\n")
     f.close()
+    print(message)
 
 
 # Program start
