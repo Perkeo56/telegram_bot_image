@@ -57,8 +57,9 @@ try:
         /apache_res -> Restart apache2 service.
         /start_pc -> Start PC Innsbruck.
         '''
-    api_key = "5184299088:AAHmvs1-caQXm4FnkkIqxpD0RUgx7H4DZ-I"
-    user_id = "66513226"
+
+    api_key = os.getenv(['TELEGRAM_API_KEY'])
+    user_id = os.getenv(['TELEGRAM_USER_ID'])
     # https://api.telegram.org/bot5184299088:AAHmvs1-caQXm4FnkkIqxpD0RUgx7H4DZ-I/sendMessage?chat_id=66513226&text=hi
 
     start_text = f"Bot started.\n\n {help_message}"
